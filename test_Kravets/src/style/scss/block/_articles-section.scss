@@ -1,0 +1,104 @@
+.articles-section {
+    padding: 50px 0;
+    background-color: $black-white;
+
+    @include breakpoint-mf ('md') {
+        padding: 80px 0;
+    }
+
+    @include breakpoint-mf ('lg') {
+        padding: 126px 0 150px;
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 50px;
+        color: $black-blue;
+        text-align: center;
+        padding: 0 0 70px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            border: 3px solid $orange;
+            width: 50px;
+            top: 70px;
+            left: calc(50% - 50px);
+        }
+    }
+
+    &__img-holder {
+        max-width: 420px;
+    }
+
+    &__text-holder {
+        background-color: $white;
+        padding: 25px 30px 30px;
+        max-width: 420px;
+
+        @include breakpoint-mf ('md') {
+            height: 272px;
+        }
+    }
+
+    &__col-title {
+        font-size: 19px;
+        line-height: 34px;
+        color: $black-blue;
+        padding: 0 0 19px;
+
+        @include breakpoint-mf ('lg') {
+            font-size: 24px;
+        }
+    }
+
+    &__col-description {
+        font-family: 'Inter';
+        font-size: 19px;
+        line-height: 30px;
+        color: $grey;
+        padding: 0 0 11px;
+    }
+
+    &__img-text-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__col-btn {
+        font-size: 19px;
+        line-height: 23px;
+        color: $black-blue;
+        border-bottom: 2px solid $black-blue;
+    }
+
+    &__date {
+        font-family: 'Inter';
+        font-size: 16px;
+        line-height: 26px;
+        color: $black-blue;
+    }
+
+    &__button-prev,
+    &__button-next {
+        border-bottom: 3px solid $black-blue;
+        background-color: $orange;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: $black-blue  !important;
+
+    @include breakpoint-mf ('lg') {
+        background-color: $orange;
+        border-radius: 100px !important;
+        width: 50px !important;
+        height: 50px !important;
+        padding: 10px 18px !important;
+
+    }
+
+}

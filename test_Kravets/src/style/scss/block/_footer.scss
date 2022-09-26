@@ -1,0 +1,193 @@
+.footer {
+    padding: 50px 0;
+    background-color: $black-blue;
+
+    @include breakpoint-mf ('md') {
+        padding: 80px 0;
+    }
+
+    @include breakpoint-mf ('lg') {
+        padding: 95px 0 24px;
+    }
+
+    .logo-holder {
+        padding: 0 0 80px;
+    }
+
+    .container {
+        @include breakpoint-mf ('lg') {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__link-holder {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 0 40px;
+
+        @include breakpoint-mf ('lg') {
+            display: block;
+            padding: 0 100px 0 0;
+        }
+
+        @include breakpoint-mf ('xl') {
+            padding: 0 126px 0 0;
+        }
+    }
+
+    &__icon-holder {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__icon-link-holder {
+        padding: 0 10px 0 0;
+    }
+
+    &__nav-holder {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+
+        @include breakpoint-mf ('md') {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    &__nav {
+        padding: 0 0 30px;
+
+        @include breakpoint-mf ('md') {
+            padding: 0 60px 0 0;
+        }
+
+        @include breakpoint-mf ('xl') {
+            padding: 0 140px 0 0
+        }
+
+        &_second {
+            @extend .footer__nav;
+
+            @include breakpoint-mf ('xl') {
+                padding: 0 93px 0 0;
+            }
+        }
+    }
+
+    &__nav-title {
+        display: block;
+        color: $white;
+        font-size: 24px;
+        line-height: 34px;
+        padding: 0 0 24px;
+    }
+
+    &__nav-item {
+        padding: 0 0 9px;
+
+        &:last-child {
+            padding: 0;
+        }
+    }
+
+    &__nav-link {
+        font-family: 'Inter';
+        font-size: 18px;
+        line-height: 31px;
+        padding: 0 0 0 11px;
+        color: $blue;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: url(/src/image/footer-dots.png);
+            top: -7px;
+            left: -28px;
+        }
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &__contact-title {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        line-height: 34px;
+        color: $white;
+        padding: 0 0 27px;
+
+        @include breakpoint-mf ('md') {
+            text-align: left;
+        }
+    }
+
+    &__contact-col {
+        text-align: center;
+        padding: 0 0 28px;
+
+        @include breakpoint-mf ('md') {
+            text-align: left;
+        }
+
+        @include breakpoint-mf ('xl') {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &:last-child {
+            padding: 0;
+        }
+    }
+
+    &__col-title {
+        font-size: 18px;
+        line-height: 27px;
+        color: $white;
+        padding: 0 28px 0 0;
+    }
+
+    &__col-description-holder {
+        max-width: 234px;
+    }
+
+    &__col-description {
+        font-family: 'Inter';
+        font-size: 17px;
+        line-height: 27px;
+        color: $blue;
+    }
+
+    &__pseudo-description {
+        padding: 50px 0 0;
+        text-align: center;
+        margin: 0 auto;
+
+        @include breakpoint-mf ('md') {
+            padding: 95px 0 0;
+        }
+    }
+
+    &__pseudo-title {
+        font-family: 'Inter';
+        font-size: 10px;
+        line-height: 26px;
+        color: $blue;
+
+        @include breakpoint-mf ('md') {
+            font-size: 17px;
+        }
+
+        &_description {
+            @extend .footer__pseudo-title;
+            color: $white;
+        }
+    }
+}

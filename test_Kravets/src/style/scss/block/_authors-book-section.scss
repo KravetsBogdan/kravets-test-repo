@@ -1,0 +1,146 @@
+.authors-book-section {
+    padding: 50px 0;
+
+    @include breakpoint-mf ('md') {
+        padding: 80px 0;
+    }
+
+    @include breakpoint-mf ('lg') {
+        padding: 126px 0 150px;
+    }
+
+    &__title {
+        text-align: center;
+        position: relative;
+        padding: 0 0 70px;
+        font-size: 35px;
+        line-height: 50px;
+        color: $black-blue;
+
+        @include breakpoint-mf ('md') {
+            font-size: 42px;
+        }
+
+        @include breakpoint-mf ('lg') {
+            padding: 0 0 96px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            color: $orange;
+            width: 50px;
+            border: 3px solid $orange;
+            top: 70px;
+            left: calc(50% - 50px);
+        }
+    }
+
+    &__books {
+        @include breakpoint-mf('lg') {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0 -24px;
+        }
+    }
+
+    &__book-holder {
+        @include breakpoint-mf ('lg') {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-direction: row-reverse;
+            padding: 0 24px 0 0;
+        }
+
+        &:last-child {
+            padding: 40px 0 0;
+
+            @include breakpoint-mf ('lg') {
+                padding: 0 0 0 24px;
+            }
+        }
+    }
+
+    &__text-holder,
+    &__book-img-holder {
+        @include breakpoint-mf ('lg') {
+            width: 50%;
+        }
+    }
+
+    &__text-holder {
+        text-align: center;
+        padding: 30px 0 0;
+
+        @include breakpoint-mf ('lg') {
+            text-align: left;
+            padding: 0 0 0 30px;
+        }
+    }
+
+    &__title-book {
+        font-size: 32px;
+        line-height: 38px;
+        color: $black-blue;
+        padding: 0 0 7px;
+    }
+
+    &__price {
+        font-family: 'Inter';
+        display: block;
+        font-size: 21px;
+        line-height: 33px;
+        color: $orange;
+        padding: 0 0 17px;
+    }
+
+    &__book-description {
+        font-family: 'Inter';
+        font-size: 19px;
+        line-height: 28px;
+        color: $grey;
+        padding: 0 0 13px;
+    }
+
+    &__pseudo-title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint-mf ('lg') {
+            justify-content: flex-start;
+        }
+    }
+
+    &__pseudo-title-book {
+        display: block;
+        font-size: 24px;
+        line-height: 29px;
+        color: $black-blue;
+        padding: 0 0 45px 26px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: $orange;
+            top: 5px;
+            left: 0;
+            border-radius: 100px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__btn-holder {
+        padding: 0 0 40px;
+
+        @include breakpoint-mf ('lg') {
+            padding: 0;
+        }
+    }
+}

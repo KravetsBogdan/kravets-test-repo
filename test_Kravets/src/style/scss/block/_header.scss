@@ -1,0 +1,198 @@
+.header {
+    padding: 30px 0 20px;
+    background-color: $black-blue;
+    position: relative;
+
+    &.active {
+        .nav {
+            transform: translateX(0);
+        }
+
+        .nav-opener {
+            span {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::before {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                bottom: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__link-holder {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__icon-holder {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0 0 38px;
+
+        @include breakpoint ('lm') {
+            padding: 0 0 0 18px;
+        }
+    }
+
+    &__icon-link-holder {
+        padding: 0 10px 0 0;
+
+        @include breakpoint ('xxs') {
+            display: none;
+        }
+
+        &:last-child {
+            padding: 0;
+        }
+    }
+
+    &__icon-buy-holder {
+        @include breakpoint ('lx') {
+            padding: 0 0 40px;
+        }
+    }
+
+
+    &__btn-holder {
+        padding: 0 0 0 103px;
+
+        @include breakpoint ('lm') {
+            padding: 0 0 0 10px;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include breakpoint ('lx') {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px 0 40px;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: all ease-in-out 0.3s;
+        background-color: $black-blue;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include breakpoint ('lx') {
+            flex-direction: column;
+            margin: 0 0 20px;
+            width: 100%;
+        }
+    }
+
+    &__item {
+        @include breakpoint ('lx') {
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    &__link {
+        font-family: 'Inter';
+        font-size: 17px;
+        line-height: 26px;
+        padding: 0 47px 0 0;
+
+        &:last-child {
+            padding: 0 39px 0 0;
+
+            @include breakpoint ('lx') {
+                padding: 10px;
+            }
+        }
+
+        &:hover {
+            color: $orange;
+        }
+
+        @include breakpoint ('lx') {
+            display: block;
+            text-align: center;
+            padding: 10px;
+        }
+    }
+}
+
+.nav-opener {
+    display: none;
+
+    @include breakpoint ('lx') {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    &::before {
+        content: '';
+        width: 30px;
+        height: 2px;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $white;
+        transition: all ease-in-out 0.3s;
+    }
+
+    &::after {
+        content: '';
+        width: 30px;
+        height: 2px;
+        border-radius: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $white;
+        transition: all ease-in-out 0.3s;
+    }
+
+    span {
+        width: 30px;
+        height: 2px;
+        border-radius: 4px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $white;
+        transition: all ease-in-out 0.3s;
+    }
+}

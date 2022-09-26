@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('/src/fonts/icomoon.eot?l1jwov');
+  src: url('/src/fonts/icomoon.eot?l1jwov#iefix') format('embedded-opentype'),
+    url('/src/fonts/icomoon.ttf?l1jwov') format('truetype'),
+    url('/src/fonts/icomoon.woff?l1jwov') format('woff'),
+    url('/src/fonts/icomoon.svg?l1jwov#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-buy:before {
+  content: "\e900";
+  color: $black;
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+  color: $white;
+  border: 1px solid $orange;
+  padding: 15px;
+}
+
+.icon-instagram:before {
+  content: "\ea92";
+  color: $white;
+  border: 1px solid $orange;
+  padding: 15px;
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+  color: $white;
+  border: 1px solid $orange;
+  padding: 15px;
+}
+
+.icon-linkedin:before {
+  content: "\eaca";
+  color: $white;
+  border: 1px solid $orange;
+  padding: 15px;
+}
+
+.icon-facebook_white:before {
+  content: "\ea90";
+  color: $black;
+  background-color: $white;
+  border: 1px solid $white;
+  padding: 15px;
+}
+
+.icon-twitter_white:before {
+  content: "\ea96";
+  color: $black;
+  background-color: $white;
+  border: 1px solid $white;
+  padding: 15px;
+}
+
+.icon-linkedin_white:before {
+  content: "\eaca";
+  color: $black;
+  background-color: $white;
+  border: 1px solid $white;
+  padding: 15px;
+}

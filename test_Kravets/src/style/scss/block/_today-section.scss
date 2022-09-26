@@ -1,0 +1,91 @@
+.today-section {
+    padding: 50px 0;
+    background-color: $black-blue;
+
+    @include breakpoint-mf ('md') {
+        padding: 70px 0;
+    }
+
+    .container {
+        @include breakpoint-mf ('md') {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        @include breakpoint-mf ('lg') {
+            justify-content: space-between;
+        }
+    }
+
+    &__text-holder,
+    &__img-holder {
+        @include breakpoint-mf ('md') {
+            width: 50%;
+        }
+    }
+
+    &__text-holder {
+        padding: 0 0 50px;
+
+        @include breakpoint-mf ('md') {
+            padding: 0 50px 0 0;
+        }
+
+
+    }
+
+    &__title {
+        font-size: 25px;
+        line-height: 54px;
+        color: $white;
+        text-align: center;
+        position: relative;
+        padding: 0 0 54px;
+
+        @include breakpoint-mf ('md') {
+            text-align: left;
+
+        }
+
+        @include breakpoint-mf ('lg') {
+            font-size: 40px;
+        }
+
+        @include breakpoint-mf ('xl') {
+            font-size: 45px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            border: 3px solid $orange;
+            width: 50px;
+            top: 74px;
+        }
+    }
+
+    &__description {
+        font-family: 'Inter';
+        font-size: 19px;
+        line-height: 28px;
+        color: $blue;
+        padding: 0 0 45px;
+    }
+
+    &__btn-holder {
+        text-align: center;
+
+        @include breakpoint-mf ('md') {
+            text-align: left;
+        }
+    }
+
+    .btn_white {
+        background-color: $black-blue;
+    }
+
+    &__img-holder {
+        max-width: 560px;
+    }
+}

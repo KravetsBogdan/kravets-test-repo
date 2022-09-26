@@ -1,0 +1,223 @@
+.about-author-section {
+    padding: 50px 0;
+    background-color: $white-grey;
+
+    @include breakpoint-mf ('md') {
+        padding: 80px 0;
+    }
+
+    @include breakpoint-mf ('lg') {
+        padding: 150px 0 140px;
+    }
+
+    .container {
+        @include breakpoint-mf ('lg') {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+    }
+
+    &__text-holder,
+    &__img-holder {
+        @include breakpoint-mf ('lg') {
+            width: 50%;
+        }
+    }
+
+    &__text-holder {
+        @include breakpoint-mf ('lg') {
+            padding: 0 0 0 20px;
+        }
+
+        @include breakpoint-mf ('xl') {
+            padding: 0 0 0 150px;
+        }
+    }
+
+    &__title {
+        font-size: 35px;
+        line-height: 50px;
+        color: $black-blue;
+        padding: 0 0 40px;
+        position: relative;
+        text-align: center;
+
+        @include breakpoint-mf ('lg') {
+            text-align: left;
+            font-size: 42px;
+            padding: 0 0 59px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            color: $orange;
+            border: 3px solid $orange;
+            width: 50px;
+            top: 70px;
+        }
+    }
+
+    &__title-description {
+        font-family: 'Inter';
+        font-size: 19px;
+        line-height: 34px;
+        color: $grey;
+        padding: 0 0 34px;
+    }
+
+    &__achievement {
+        padding: 0 0 20px;
+        text-align: center;
+
+        @include breakpoint-mf ('md') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 0 40px;
+        }
+
+        @include breakpoint-mf ('lg') {
+            justify-content: flex-start;
+            padding: 0 0 54px;
+        }
+    }
+
+    &__achievement-col {
+        padding: 0 0 20px;
+
+        @include breakpoint-mf ('md') {
+            border-right: 1px solid $orange;
+            padding: 0 20px;
+        }
+
+        &:first-child {
+            @include breakpoint-mf ('lg') {
+                padding: 0 20px 0 0;
+            }
+        }
+
+        &:last-child {
+            @include breakpoint-mf ('md') {
+                border: none;
+            }
+
+            @include breakpoint-mf ('lg') {
+                padding: 0 0 0 20px;
+            }
+        }
+    }
+
+    &__achievement-number,
+    &__achievement-number-description {
+        display: block;
+
+        @include breakpoint-mf ('md') {
+            text-align: left;
+        }
+    }
+
+    &__achievement-number {
+        font-size: 54px;
+        line-height: 77px;
+        color: $black-blue;
+
+    }
+
+    &__achievement-number-description {
+        font-family: 'Inter';
+        font-size: 17px;
+        line-height: 22px;
+        color: $grey;
+    }
+
+    &__contact {
+        background-color: $black-blue;
+        padding: 15px 20px;
+        text-align: center;
+
+        @include breakpoint-mf ('lg') {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
+    &__contact-img-holder,
+    &__contact-text-holder {
+        display: inline-block;
+    }
+
+    &__contact-text-holder {
+        @include breakpoint-mf ('md') {
+            padding: 0 0 0 30px;
+        }
+
+        @include breakpoint-mf ('lg') {
+            padding: 0 0 0 40px;
+        }
+    }
+
+    &__contact-img-holder {
+        max-width: 110px;
+        max-height: 110px;
+        margin: 0 auto;
+
+        @include breakpoint-mf ('lg') {
+            margin: 0;
+        }
+
+        @include breakpoint-mf ('xl') {
+            max-width: 130px;
+            max-height: 130px;
+        }
+    }
+
+    &__contact-title {
+        font-size: 22px;
+        line-height: 26px;
+        color: $orange;
+        padding: 20px 0 10px;
+
+        @include breakpoint-mf ('md') {
+            padding: 0 0 10px;
+        }
+    }
+
+    &__contact-author-holder {
+        @include breakpoint-mf ('md') {
+            padding: 0 0 4px;
+        }
+
+        &:last-child {
+            @include breakpoint-mf ('md') {
+                padding: 0;
+            }
+        }
+    }
+
+    &__contact-author {
+        font-family: 'Inter';
+        font-size: 18px;
+        line-height: 28px;
+        color: $blue;
+
+        &_description {
+            @extend .about-author-section__contact-author;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+
+    &__img-holder {
+        padding: 30px 0 0;
+
+        @include breakpoint-mf ('lg') {
+            padding: 0;
+        }
+    }
+}

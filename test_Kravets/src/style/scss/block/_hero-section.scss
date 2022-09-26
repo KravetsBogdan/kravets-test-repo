@@ -1,0 +1,224 @@
+.hero-section {
+    padding: 50px 0;
+    background-color: $black-blue;
+    color: $white;
+
+    @include breakpoint-mf ('md') {
+        padding: 80px 0;
+    }
+
+    @include breakpoint-mf ('lg') {
+        padding: 121px 0 100px;
+    }
+
+    .container {
+        @include breakpoint-mf ('lg') {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
+    &__text-holder,
+    &__img-holder {
+        @include breakpoint-mf ('lg') {
+            width: 50%;
+        }
+    }
+
+    &__text-holder {
+        @include breakpoint-mf ('lg') {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+    }
+
+    &__pseudo-title-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__pseudo-title {
+        display: block;
+        font-size: 19px;
+        line-height: 19px;
+        padding: 0 0 5px 50px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            color: $orange;
+            width: 35px;
+            border: 2px solid $orange;
+            top: 25%;
+            left: 0;
+        }
+
+        @include breakpoint-mf ('md') {
+            text-align: center;
+        }
+
+        @include breakpoint-mf ('lg') {
+            padding: 0 0 10px 49px;
+            font-size: 21px;
+            line-height: 36px;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 45px;
+        padding: 0 0 14px;
+        text-align: center;
+
+        @include breakpoint-mf ('xxs') {
+            font-size: 42px;
+            line-height: 50px;
+        }
+
+        @include breakpoint-mf ('md') {
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 64px;
+            line-height: 78px;
+        }
+
+        @include breakpoint-mf ('lg') {
+            margin: 0;
+            padding: 0 0 24px;
+        }
+    }
+
+    &__title-description {
+        padding: 0 0 40px;
+
+        @include breakpoint-mf('md') {
+            text-align: center;
+
+            @include breakpoint-mf ('lg') {
+                text-align: left;
+                padding: 0 0 60px;
+            }
+        }
+    }
+
+    &__first-description {
+        display: block;
+        color: $blue;
+        font-family: 'Inter';
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    &__btn-list {
+        text-align: center;
+
+        @include breakpoint-mf ('md') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include breakpoint-mf ('lg') {
+            padding: 0 0 71px;
+        }
+    }
+
+
+    &__btn-item {
+        padding: 0 0 50px;
+
+        @include breakpoint-mf('md') {
+            padding: 0 0 40px;
+        }
+
+        @include breakpoint-mf ('lg') {
+            padding: 0;
+        }
+    }
+
+    &__btn-link {
+        padding: 0 0 5px;
+        font-size: 19px;
+        line-height: 30px;
+        border-bottom: 1px solid $white;
+
+        @include breakpoint-mf('md') {
+            margin: 0 0 0 51px;
+        }
+    }
+
+    &__list-holder {
+        text-align: center;
+
+        @include breakpoint-mf ('md') {
+            padding: 0 0 20px;
+        }
+
+        @include breakpoint-mf ('lg') {
+            padding: 0;
+        }
+    }
+
+    &__title-list,
+    &__list-description {
+        display: block;
+        padding: 0 0 12px;
+        position: relative;
+    }
+
+    &__title-list {
+        text-align: left;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: $orange;
+            top: 3px;
+            left: -26px;
+            border-radius: 100px;
+            width: 16px;
+            height: 16px;
+        }
+
+        @include breakpoint-mf ('lg') {
+            font-size: 24px;
+            line-height: 29px;
+            padding: 0 0 12px;
+        }
+    }
+
+    &__list-description {
+        @include breakpoint-mf ('lg') {
+            font-family: 'Inter';
+            color: $blue;
+            padding: 0;
+            font-size: 17px;
+            line-height: 27px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+
+        @include breakpoint-mf('md') {
+            display: inline-block;
+            padding: 0 30px;
+        }
+
+        &:last-child {
+            padding: 0 0 20px;
+
+            @include breakpoint-mf ('md') {
+                padding: 0 0 0 30px;
+            }
+        }
+    }
+}
